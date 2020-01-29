@@ -1,0 +1,49 @@
+{%set
+tabs = [
+  { isActive: true },
+  {}
+]
+%}
+
+<!-- begin section -->
+<section id="program" class="section pb-0 js-scroll-to-section">
+  <div class="container">
+    <div class="section__title text-center">
+      <h2 class="title title--h2">программа</h2>
+    </div>
+
+    <!-- begin program -->
+    <div class="program js-tabs">
+      <div class="program__tabs">
+        {% for i in tabs %}
+        <div class="program__tab-wrap">
+          <button
+            class="program__tab{% if i.isActive %} program__tab--active{% endif %} js-tabs-btn"
+            data-tabs-tab="program-{{ loop.index }}">Поток {{ loop.index }}</button>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="program__content">
+        {% for i in tabs %}
+        <div
+          class="program__item{% if i.isActive %} program__item--active{% endif %} js-tabs-item"
+          data-tabs-item="program-{{ loop.index }}">
+            {% include "partials/_program.html" %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- end program -->
+
+    <div class="section__btn">
+      {{ mixins.btn(
+        title = 'Зарегистрироваться',
+        mod = 'btn--wide-md js-popup-open',
+        href = false,
+        attributes = { 'data-popup-target': 'registration' }
+      ) }}
+    </div>
+  </div>
+</section>
+<!-- end section -->

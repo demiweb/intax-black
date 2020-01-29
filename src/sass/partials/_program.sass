@@ -1,0 +1,113 @@
+.program
+  $this: &
+  &__tabs
+    @extend .grid
+    margin-bottom: 0
+  &__tab-wrap
+    @extend ._col-6
+    display: block
+    margin-bottom: 0
+  &__tab
+    display: block
+    width: 100%
+    box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.09)
+    background-color: $white
+    text-align: center
+    text-transform: uppercase
+    color: $accent
+    +font-title
+    +css-lock(21, 36, 320, 1399, font-size)
+    padding: .2em .5em
+    +tr(color .3s, background-color .3s)
+    +hover
+      @extend #{$this}__tab--active
+    &--active
+      background-color: $accent
+      color: $white
+  &__content
+    background-color: $white
+    padding: 25px 90px
+    box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.09)
+    +xl
+      padding: 25px
+    +sm
+      padding: 15px
+  &__item
+    +hidden
+    max-height: 0
+    overflow: hidden
+    +tr(opacity .3s, visibility .3s)
+    &--active
+      +visible
+      max-height: none
+      overflow: visible
+
+.scedule
+  &__item
+    +notlast
+      margin-bottom: 25px
+      +md
+        margin-bottom: 15px
+
+.scedule-item
+  +flex
+  +sm
+    display: block
+  &__time
+    text-transform: uppercase
+    color: $accent
+    text-align: right
+    font-size: em(30)
+    +font-title
+    width: percentage(130/1230)
+    +xl
+      width: 12%
+    +lg
+      width: 15%
+    +md
+      width: 18%
+    +sm
+      width: auto
+      text-align: left
+  &__content
+    width: percentage((1230 - 130) / 1230)
+    padding-left: 30px
+    padding-top: .5em
+    +xl
+      width: 88%
+    +lg
+      width: 85%
+      padding-left: 15px
+    +md
+      width: 82%
+    +sm
+      width: auto
+      padding-left: 0
+  &__title
+    font-weight: 700
+    margin-bottom: .2em
+  &__text
+    // em
+    //   color: $gray-light
+    p, blockquote
+      // +notlast
+      //   margin-bottom: 35px
+      //   +md
+      //     margin-bottom: 20px
+    blockquote
+      font-style: italic
+      background-color: $white
+      box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.1)
+      padding: 1em
+      color: $accent
+      margin-top: 35px
+      +md
+        margin-top: 20px
+    a, button
+      color: $blue
+      text-decoration: underline
+  &__sign
+    strong
+      font-size: $fz-sm
+      font-style: italic
+

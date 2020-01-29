@@ -1,0 +1,57 @@
+<!-- begin hero -->
+<section class="hero">
+  <div class="hero__bg">
+    <video
+      class="js-lazy"
+      src=""
+      autoplay=""
+      muted=""
+      loop=""
+      playsinline=""
+      data-src="./video/video-bg.mp4"></video>
+  </div>
+
+  <div class="container">
+    <div class="hero__inner">
+      <div class="hero__content">
+        <div class="hero__upttl">
+          <!-- begin date-label -->
+          <div class="date-label">
+            <div class="date-label__title">2 марта 2020. москва</div>
+          </div>
+          <!-- end date-label -->
+        </div>
+
+        <div class="hero__title">
+          <h1 class="title title--h1">Intax private capital forum</h1>
+        </div>
+
+        <div class="hero__subttl">
+          Международная конференция-выставка, посвященная структурированию, 
+налогообложению и управлению частным капиталом состоятельных лиц-резидентов РФ.
+        </div>
+
+        <div class="hero__btns">
+          <div class="hero__btn">
+            {{ mixins.btn(
+              title = 'зарегистрироваться',
+              mod = 'btn--lg btn--full js-popup-open',
+              href = false,
+              attributes = { 'data-popup-target': 'registration' }
+            ) }}
+          </div>
+
+          <div class="hero__btn">
+            {{ mixins.btn(
+              title = 'стать спонсором',
+              mod = 'btn--lg btn--full btn--transp js-popup-open',
+              href = false,
+              attributes = { 'data-popup-target': 'sponsor-reg' }
+            ) }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end hero -->

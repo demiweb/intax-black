@@ -1,0 +1,45 @@
+{%set
+blocks = [
+  {
+    id: 'sponsors',
+    title: 'Спонсоры',
+    btn: {
+      title: 'стать спонсором',
+      mod: 'btn--wide js-popup-open',
+      attributes: { 'data-popup-target': 'sponsor-reg' }
+    }
+  },
+  {
+    id: 'exposition',
+    title: 'выставка',
+    btn: {
+      title: 'разместить стенд',
+      mod: 'btn--wide js-popup-open',
+      attributes: { 'data-popup-target': 'stand-reg' }
+    }
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    {% for i in blocks %}
+    <div id="{{ i.id }}" class="section__block js-scroll-to-section">
+      <h2 class="title title--h2 text-center">{{ i.title | safe }}</h2>
+
+      {% include "partials/_sponsors-slider.html" %}
+
+      <div class="section__btn">
+        {{ mixins.btn(
+          title = i.btn.title,
+          mod = i.btn.mod or 'btn--wide',
+          href = false,
+          attributes = i.btn.attributes
+        ) }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+<!-- end section -->

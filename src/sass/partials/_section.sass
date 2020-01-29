@@ -1,0 +1,115 @@
+.section
+  position: relative
+  padding-top: 100px
+  padding-bottom: 100px
+  +xl
+    padding-top: 80px
+    padding-bottom: 80px
+  +lg
+    padding-top: 60px
+    padding-bottom: 60px
+  +md
+    padding-top: 40px
+    padding-bottom: 40px
+  +sm
+    padding-top: 30px
+    padding-bottom: 30px
+  &__title
+    margin-bottom: 40px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+  &__side-title
+    background-color: $gray-lightest
+    padding-bottom: 20px
+    +md
+      padding-top: 20px
+  &__img
+    +cover
+    width: 100%
+    display: block
+    text-align: left
+    height: 100%
+    padding-top: 50%
+    position: relative
+    background-color: $gray-light
+    +sm
+
+    iframe
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+    .play-img
+      +vcenter
+        
+
+  &__img-wrap
+    font-size: 0
+    margin-bottom: 30px
+    img
+      width: 100%
+    +md
+      margin-bottom: 15px
+
+  &__side-content, &__side-title
+    padding-left: percentage(2/12)
+    +md
+      padding-left: 70px
+  &__side
+    position: relative    
+    +before
+      position: absolute
+      background-color: $gray-lightest
+      top: 0
+      right: 0
+      left: 0
+      z-index: 0
+      top: -100px
+      bottom: 100%
+      +xl
+        top: -80px
+      +lg
+        top: -60px
+      +md
+        display: none
+  &__btn
+    text-align: center
+    padding-top: 40px
+  &__block
+    +notlast
+      margin-bottom: 80px
+      +xl
+        margin-bottom: 60px
+      +lg
+        margin-bottom: 40px
+      +md
+        margin-bottom: 20px
+
+
+
+  &--color
+    background-color: $accent
+    +image('bg-color.jpg')
+    +cover
+    color: $white
+  &--border
+    border-top: 1px solid $gray-lightest
+    border-bottom: 1px solid $gray-lightest
+  &--gray
+    background-color: #eeeeee
+
+.section-btns
+  @extend .hero__btns
+  max-width: 750px
+  margin-left: auto
+  margin-right: auto  
+  margin-top: 30px
+  +sm
+    // display: block
+  +md
+    margin-top: 15px
+  &__btn
+    @extend .hero__btn

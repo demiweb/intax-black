@@ -1,0 +1,36 @@
+$fz:       16px
+$fz-sm-px: 14px
+$fz-xs-px: 12px
+$fz-sm:    em(14)
+$fz-xs:    em(12)
+
+$text-inputs: "[type='color']", "[type='date']", "[type='datetime']", "[type='datetime-local']", "[type='email']", "[type='month']", "[type='number']", "[type='password']", "[type='search']", "[type='tel']", "[type='text']", "[type='time']", "[type='url']", "[type='week']", "input:not([type])", "textarea"
+$check-inputs: "[type='checkbox']", "[type='radio']"
+
+$c-text: #616161
+$c-title: #332d2b
+
+$gray-light: #8f8f8f
+$gray-lightest: #f1f1f1
+
+$black: #000
+$white: #fff
+
+$accent: #c08b61
+$accent-dark: #302a2a
+$blue: #308ce2
+
+
+
+$header-top-height: 49px
+
+$header-bottom-height: 90px
+$header-bottom-height-shrinked: 50px
+
+$header-height: $header-top-height + $header-bottom-height
+$header-height-shrinked: $header-top-height + $header-bottom-height-shrinked
+$header-height-lg: $header-bottom-height-shrinked
+
+=windowHeight($offset)
+  height: calc(100vh - #{$offset})
+  height: calc((var(--vh, 1vh) * 100) - #{$offset})

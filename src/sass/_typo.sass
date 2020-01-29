@@ -1,0 +1,54 @@
+small
+  font-size: inherit
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 400
+
+.title
+  text-transform: uppercase
+  line-height: 1
+  +font-title
+  font-weight: 400
+  letter-spacing: .1em
+  &--h1
+    +css-lock(32, 61, 320, 1399, font-size)    
+    font-weight: 700
+  &--h2
+    +css-lock(26, 42, 320, 1399, font-size)
+    color: $c-title
+  &--h3
+    +css-lock(21, 24, 320, 1399, font-size)
+    color: $c-title
+  &--h5
+    font-size: 1em
+    color: $c-title
+  &--inherit
+    color: inherit
+
+.text
+  text-align: left
+  a
+    color: $blue
+    text-decoration: underline
+  p
+    +notlast
+      margin-bottom: 25px
+      +md
+        margin-bottom: 15px
+
+.title-under
+  position: relative  
+  padding-bottom: 10px
+  +before
+    position: absolute
+    bottom: 0
+    left: 0
+    border-top: 1px solid  $accent
+    width: 190px
+
+.text-overflow
+  overflow: hidden
+  max-height: 7em
+  display: -webkit-box
+  -webkit-line-clamp: 5
+  -webkit-box-orient: vertical

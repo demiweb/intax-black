@@ -1,0 +1,48 @@
+.faq
+
+
+.question
+  background-color: $white
+  position: relative
+  box-shadow: 0px 0px 10px 0px rgba(1, 0, 0, 0.09)
+  &__btn
+    display: block
+    width: 100%    
+    @extend .title
+    @extend .title--h5
+    padding: 50px 50px 50px 85px
+    text-align: left
+    position: relative
+    +md
+      padding: 30px 30px 30px 45px
+    +before
+      +icon-arrow(10, 10, 1, $accent, -45)
+      position: absolute
+      z-index: 1
+      top: 50px
+      right: 30px
+      +md
+        top: 30px
+        right: 15px
+    &--active
+      padding-bottom: 20px
+      +before
+        transform: rotate(135deg)
+  &__icon
+    color: $gray-lightest
+    position: absolute
+    z-index: 1
+    top: 30px
+    left: 30px
+    .icon
+      font-size: em(45)
+    +md
+      top: 15px
+      left: 5px
+  &__content
+    display: none
+    padding: 0 50px 50px 85px
+    +md
+      padding: 0 30px 30px 45px
+    &--open
+      display: block
