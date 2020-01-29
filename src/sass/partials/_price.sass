@@ -12,7 +12,8 @@
     @extend .title
     @extend .title--h2
     color: $white
-    background-color: $accent-dark
+    background-color: $accent
+    background-image: linear-gradient( to right, rgb(0,0,0) 0%, rgb(68,74,77) 100%)
     padding: .5em 1em
     text-align: center
   &__content
@@ -76,7 +77,7 @@
 
 .price
   &__old
-    color: #4b1a0c
+    // color: #4b1a0c
     +font-title
     letter-spacing: .1em
     display: inline-block
@@ -90,7 +91,7 @@
       left: 0
       right: 0
   &__price
-    color: $accent
+    color: #6aa5c2
     text-transform: uppercase
     +css-lock(26, 48, 320, 1399, font-size)
     +font-title
@@ -98,7 +99,7 @@
     margin-bottom: .1em
   &__price-title
     display: inline-block
-    border-bottom: 2px solid $accent
+    border-bottom: 2px solid #6aa5c2
   &__date
-    color: $accent
+    color: #6aa5c2
     font-size: em(14)

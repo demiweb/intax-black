@@ -2,5 +2,5 @@ ProjectTitle: intax
 
 PageList:
 - file: page.html
-- file: email.html
-- file: email-english.html
+# - file: email.html
+# - file: email-english.html

@@ -19,7 +19,8 @@
       height: $header-top-height
   &__bottom
     background-color: $accent
-    background-image: linear-gradient( to top, rgb(48,42,42) 0%, rgb(71,54,41) 100%)
+    background-image: linear-gradient( to top, rgb(0,0,0) 0%, rgb(68,74,77) 100%)
+    overflow: auto
     box-shadow: 0px 0px 25px 0px rgba(7, 6, 3, 0.5)
     position: relative
     color: $white
@@ -59,7 +60,7 @@
       left: 0
       z-index: 15
       background-color: $accent
-      background-image: linear-gradient( to top, rgb(48,42,42) 0%, rgb(71,54,41) 100%)
+      background-image: linear-gradient( to top, rgb(0,0,0) 0%, rgb(68,74,77) 100%)
       overflow: auto
       padding: 15px
       +vertical
@@ -134,14 +135,15 @@
 .lang
   text-transform: uppercase
   +font-title
+  color: #ababab
   li
     display: inline-block
   a
     +tr(color .3s)
     +hover
-      color: $accent
+      color: #343434
     &.is-active
-      color: $accent
+      color: #343434
 
 .burger 
   display: block

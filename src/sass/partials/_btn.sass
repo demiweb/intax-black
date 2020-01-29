@@ -12,8 +12,8 @@
   +before
     position: absolute
     z-index: -1
-    background-color: $accent
-    border: 1px solid $accent
+    background-color: $black
+    border: 1px solid $black
     top: 0
     left: 0
     bottom: 0
@@ -22,11 +22,10 @@
     +tr(transform .3s, background-color .3s, border-color .3s)
   +hover
     &:not(#{$this}--no-hover)
-      color: $accent
+      // color: $black
       +before
-        background-color: transparent
-    // +before
-    //   transform: skew(15deg)
+        background-color: $accent
+        border-color: $accent
   span
     position: relative
     z-index: 1
@@ -48,11 +47,30 @@
     min-width: 0
     width: 100%
   &--transp
-    color: $accent
+    color: $white
     +before
       background-color: transparent
+      border-color: $white
+    +hover
+      &:not(#{$this}--no-hover)
+        color: $black
+        +before
+          background-color: $white
+  &--white
+    color: $black
+    +hover
+      &:not(#{$this}--no-hover)
+        color: $white
+    +before
+      background-color: $white
+      border-color: $white
+  &--transp-black
+    color: $black
+    +before
+      background-color: transparent
+      // border-color: $white
     +hover
       &:not(#{$this}--no-hover)
         color: $white
         +before
-          background-color: $accent
+          // background-color: $

@@ -10,11 +10,11 @@
   &__tab
     display: block
     width: 100%
-    box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.09)
+    box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.09), inset 0px 0px 38px 0px rgba(0, 0, 0, 0.09)
     background-color: $white
     text-align: center
     text-transform: uppercase
-    color: $accent
+    color: $black
     +font-title
     +css-lock(21, 36, 320, 1399, font-size)
     padding: .2em .5em
@@ -22,7 +22,7 @@
     +hover
       @extend #{$this}__tab--active
     &--active
-      background-color: $accent
+      background-color: $black
       color: $white
   &__content
     background-color: $white
@@ -55,7 +55,7 @@
     display: block
   &__time
     text-transform: uppercase
-    color: $accent
+    color: $black
     text-align: right
     font-size: em(30)
     +font-title
@@ -86,6 +86,7 @@
   &__title
     font-weight: 700
     margin-bottom: .2em
+    color: $black
   &__text
     // em
     //   color: $gray-light

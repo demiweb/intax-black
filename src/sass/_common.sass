@@ -40,8 +40,8 @@ body
 
 .date-label
   display: inline-block
-  border-top: 1px solid  $accent
-  border-bottom: 1px solid  $accent
+  border-top: 1px solid  currentColor
+  border-bottom: 1px solid  currentColor
   text-transform: uppercase
   +font-title
   font-size: em(18)
@@ -54,7 +54,7 @@ body
     height: 10px
     width: 1px
     z-index: 1
-    background-color: $accent
+    background-color: currentColor
   &::before
     left: 0
   &::after
@@ -67,7 +67,7 @@ body
       height: 10px
       width: 1px
       z-index: 1
-      background-color: $accent
+      background-color: currentColor
     &::before
       left: 0
     &::after
@@ -87,9 +87,9 @@ body
 
 .link
   text-transform: uppercase
-  color: $accent
+  color: $black
   +font-title
-  font-weight: 300
+  font-weight: 700
   letter-spacing: 0.1em
   text-align: left
   +hover
@@ -109,7 +109,7 @@ body
   z-index: 10
   bottom: 20px
   right: 20px
-  color: $accent
+  color: #4d4b4c
   text-transform: uppercase
   font-size: em(21)
   +font-title
